@@ -1,1 +1,0 @@
-var (#theme_namespace#);
