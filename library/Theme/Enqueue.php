@@ -1,6 +1,6 @@
 <?php
 
-namespace (#theme_namespace#)\Theme;
+namespace TEMPNAME\Theme;
 
 class Enqueue
 {
@@ -18,7 +18,7 @@ class Enqueue
     public function style()
     {
         if(\Municipio\Helper\CacheBust::name('css/app.css', true, true)) {
-            wp_enqueue_style('(#theme_namespace#)', get_stylesheet_directory_uri(). '/assets/dist/' . \Municipio\Helper\CacheBust::name('css/app.css', true, true));
+            wp_enqueue_style('TEMPNAME', get_stylesheet_directory_uri(). '/assets/dist/' . \Municipio\Helper\CacheBust::name('css/app.css', true, true));
         }
     }
 
@@ -29,7 +29,7 @@ class Enqueue
     public function script()
     {
         if(\Municipio\Helper\CacheBust::name('js/app.js', true, true)) {
-            wp_enqueue_script('(#theme_namespace#)', get_stylesheet_directory_uri(). '/assets/dist/' . \Municipio\Helper\CacheBust::name('js/app.js', true, true));
+            wp_enqueue_script('TEMPNAME', get_stylesheet_directory_uri(). '/assets/dist/' . \Municipio\Helper\CacheBust::name('js/app.js', true, true));
         }
     }
 }

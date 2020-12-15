@@ -1,7 +1,7 @@
-(#theme_namespace#) = (#theme_namespace#) || {};
-(#theme_namespace#).ExampleNamespace = (#theme_namespace#).Liquid || {};
+TEMPNAME = TEMPNAME || {};
+TEMPNAME.ExampleNamespace = TEMPNAME.Liquid || {};
 
-(#theme_namespace#).ExampleNamespace.ExampleClass = (function ($) {
+TEMPNAME.ExampleNamespace.ExampleClass = (function ($) {
 
 	var classVariable = false;
 

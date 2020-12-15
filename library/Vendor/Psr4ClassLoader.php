@@ -1,6 +1,6 @@
 <?php
 
-namespace (#theme_namespace#)\Vendor;
+namespace TEMPNAME\Vendor;
 
 /**
  * A PSR-4 compatible class loader.
