@@ -8,7 +8,7 @@ class Enqueue
     {
         // Enqueue scripts and styles
         add_action('wp_enqueue_scripts', array($this, 'style'));
-        add_action('wp_enqueue_scripts', array($this, 'script'));
+        //add_action('wp_enqueue_scripts', array($this, 'script'));
     }
 
     /**
@@ -17,9 +17,19 @@ class Enqueue
      */
     public function style()
     {
-        if(\Municipio\Helper\CacheBust::name('css/app.css', true, true)) {
-            wp_enqueue_style('TEMPNAME', get_stylesheet_directory_uri(). '/assets/dist/' . \Municipio\Helper\CacheBust::name('css/app.css', true, true));
-        }
+
+        /* Removes theme parent theme css */ 
+        wp_dequeue_style('styleguide-css'); 
+        wp_dequeue_style('municipio-css'); 
+
+        wp_enqueue_style(
+            'TEMPNAME',
+            get_stylesheet_directory_uri() .
+                        '/assets/dist/' .
+                        \Municipio\Helper\CacheBust::name('css/app.css', true),
+            array(),
+            ''
+        );
     }
 
     /**
@@ -28,8 +38,16 @@ class Enqueue
      */
     public function script()
     {
-        if(\Municipio\Helper\CacheBust::name('js/app.js', true, true)) {
-            wp_enqueue_script('TEMPNAME', get_stylesheet_directory_uri(). '/assets/dist/' . \Municipio\Helper\CacheBust::name('js/app.js', true, true));
-        }
+        wp_register_script(
+            'TEMPNAME-js',
+            get_stylesheet_directory_uri() .
+                        '/assets/dist/' .
+                        \Municipio\Helper\CacheBust::name('js/app.js'),
+            array(),
+            false,
+            true
+        );
+
+        wp_enqueue_script('TEMPNAME-js');
     }
 }
