@@ -1,1 +1,1 @@
-var TEMPNAME;
+var (#theme_namespace#);

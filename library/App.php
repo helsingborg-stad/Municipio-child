@@ -1,10 +1,10 @@
 <?php
-namespace TEMPNAME;
+namespace (#theme_namespace#);
 
 class App
 {
     public function __construct()
     {
-        new \TEMPNAME\Theme\Enqueue();
+        new \(#theme_namespace#)\Theme\Enqueue();
     }
 }

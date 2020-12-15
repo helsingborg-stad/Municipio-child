@@ -1,6 +1,6 @@
 <?php
 
-namespace TEMPNAME\Theme;
+namespace (#theme_namespace#)\Theme;
 
 class Enqueue
 {

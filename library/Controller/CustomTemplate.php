@@ -1,6 +1,6 @@
 <?php
 
-namespace TEMPNAME\Controller;
+namespace (#theme_namespace#)\Controller;
 
 /**
  * To add a custom template and load it's controller do the following:
